@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Answer sheet - scanning trial</title>
-<style>:root{--lightningcss-light:initial;--lightningcss-dark: ;color-scheme:light}*{box-sizing:border-box}body{color:#111;background:#e8e8e8;margin:0;font-family:system-ui,Arial,sans-serif}.bar{background:#fff;border-bottom:1px solid #bbb;flex-wrap:wrap;align-items:center;gap:10px 16px;padding:10px 14px;display:flex}.bar label{align-items:center;gap:6px;font-size:14px;display:flex}.bar select,.bar button{font:inherit;padding:6px 10px}.bar .hint{color:#444;flex-basis:100%;font-size:13px}.page{justify-content:center;padding:12px 0;display:flex}.sheet{background:#fff;width:190mm;max-width:none;height:255mm;overflow:hidden;box-shadow:0 1px 6px #00000059}.sheet svg{width:190mm;height:255mm;display:block}@media (width<=800px){.page{justify-content:flex-start;padding:8px;overflow-x:auto}}@page{margin:0}@media print{html,body{background:#fff}.bar{display:none}.page{margin:10mm 0;padding:0}.sheet{box-shadow:none;break-inside:avoid}*{-webkit-print-color-adjust:exact;print-color-adjust:exact}}</style>
-  <script type="module" crossorigin src="/trial/assets/sheet-LH0M5u_W.js"></script>
+<style>:root{--lightningcss-light:initial;--lightningcss-dark: ;color-scheme:light}*{box-sizing:border-box}body{color:#111;background:#e8e8e8;margin:0;font-family:system-ui,Arial,sans-serif}.bar{background:#fff;border-bottom:1px solid #bbb;flex-wrap:wrap;align-items:center;gap:10px 16px;padding:10px 14px;display:flex}.bar label{align-items:center;gap:6px;font-size:14px;display:flex}.bar select,.bar button{font:inherit;padding:6px 10px}.bar .hint{color:#444;flex-basis:100%;font-size:13px}.page{justify-content:center;padding:12px 0;display:flex}.paper{--pw:210mm;--ph:297mm;width:var(--pw);height:var(--ph);background:#fff;outline:1px solid #8a8a8a;flex:none;justify-content:center;align-items:center;display:flex;box-shadow:0 1px 6px #00000059}.paper[data-paper=letter]{--pw:215.9mm;--ph:279.4mm}.sheet{background:#fff;outline:1px dashed #b5b5b5;flex:none;width:190mm;max-width:none;height:255mm;overflow:hidden}.sheet svg{width:190mm;height:255mm;display:block}@media screen and (width<=800px){.page{justify-content:flex-start;padding:8px;overflow-x:auto}}@page{size:A4;margin:0}@media print{html,body{background:#fff;margin:0;padding:0}.bar{display:none}.page{margin:0;padding:0;display:block;overflow:visible}.paper{box-shadow:none;break-inside:avoid;break-after:avoid;outline:none;margin:0}.sheet{outline:none}*{-webkit-print-color-adjust:exact;print-color-adjust:exact}}</style>
+  <script type="module" crossorigin src="/trial/assets/sheet-DGYKIQpW.js"></script>
   <link rel="modulepreload" crossorigin href="/trial/assets/layout-DVuCcWuD.js">
 </head>
 <body>
@@ -16,9 +16,12 @@
   <label>Choices
     <select id="choices"><option value="4">A - D</option><option value="5">A - E</option></select>
   </label>
+  <label>Paper
+    <select id="paper"><option value="a4">A4 (210 &times; 297 mm)</option><option value="letter">Short bond (8.5 &times; 11 in)</option></select>
+  </label>
   <button id="print" type="button">Print</button>
-  <span class="hint">Print at 100% / Actual size (not "Fit to page"), A4 or Short bond, black and white. Choose the same Items / Choices on the scanning page.</span>
+  <span class="hint">Pick the Paper you will print on. Print at 100% / Actual size (not "Fit to page"), black and white; the print dialog will pre-select that paper. Choose the same Items / Choices on the scanning page.</span>
 </div>
-<div class="page"><div class="sheet" id="sheet"></div></div>
+<div class="page"><div class="paper" id="paper-box" data-paper="a4"><div class="sheet" id="sheet"></div></div></div>
 </body>
 </html>

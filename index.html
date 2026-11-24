@@ -1,82 +1,19 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Answer-sheet scan trial</title>
-  <script type="module" crossorigin src="/trial/assets/index-DQhJfCMV.js"></script>
-  <link rel="modulepreload" crossorigin href="/trial/assets/layout-DVuCcWuD.js">
-  <link rel="stylesheet" crossorigin href="/trial/assets/index-BWCmdJpY.css">
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' blob:; connect-src 'none'; worker-src 'self'; manifest-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#132c3b">
+  <link rel="manifest" href="/trial/manifest.webmanifest">
+  <link rel="icon" href="/trial/icon-192.png">
+  <title>Ednovera Attendance</title>
+  <script type="module" crossorigin src="/trial/assets/index-DsApoN0r.js"></script>
+  <link rel="stylesheet" crossorigin href="/trial/assets/index-DImKcXur.css">
 </head>
 <body>
-<header>
-  <h1>Answer-sheet scan trial</h1>
-  <p class="sub">Trial only. Photos stay on this phone; nothing is uploaded.</p>
-</header>
-<main>
-  <section aria-labelledby="h-setup">
-    <h2 id="h-setup">1. Sheet and conditions</h2>
-    <div class="row">
-      <label>Items <select id="items"><option>50</option><option>60</option><option>100</option></select></label>
-      <label>Choices <select id="choices"><option value="4">A - D</option><option value="5">A - E</option></select></label>
-      <a href="./sheet.html" target="_blank" rel="noopener">Open printable sheet</a>
-    </div>
-    <label class="block">Note for the next scan (pencil / ballpen, lighting, bent, photocopy...)
-      <input id="note" type="text" maxlength="120" placeholder="e.g. pencil, dim room">
-    </label>
-  </section>
-
-  <section aria-labelledby="h-scan">
-    <h2 id="h-scan">2. Scan</h2>
-    <div class="row buttons">
-      <label class="btn primary">Take photo<input id="file-take" type="file" accept="image/*" capture="environment" hidden></label>
-      <button id="btn-camera" type="button" class="btn">Live camera</button>
-      <label class="btn">Choose photo<input id="file-choose" type="file" accept="image/*" hidden></label>
-    </div>
-    <div id="camera-box" hidden>
-      <video id="video" playsinline muted></video>
-      <div class="row buttons">
-        <button id="btn-capture" type="button" class="btn primary">Capture</button>
-        <button id="btn-camera-close" type="button" class="btn">Close camera</button>
-      </div>
-      <p class="hint">Fit the whole sheet in view with all 4 black squares visible, then tap Capture.</p>
-    </div>
-    <p id="status" role="status" aria-live="polite" class="status">No sheet scanned yet.</p>
-  </section>
-
-  <section id="result" aria-labelledby="h-result" hidden>
-    <h2 id="h-result">3. Result</h2>
-    <div class="canvas-wrap"><canvas id="canvas" aria-label="Photo with the answers the reader found"></canvas></div>
-    <p class="legend"><span class="dot g"></span>read <span class="dot o"></span>unsure <span class="dot r"></span>double or blank</p>
-    <div class="codes">
-      <div>Test code <strong id="test-code">-</strong></div>
-      <div>Learner no. <strong id="learner-no">-</strong></div>
-    </div>
-    <p id="warnings" class="warn"></p>
-    <h3>Answers <span class="hint">(tap a box to correct it if the reader got it wrong)</span></h3>
-    <div id="grid" class="grid"></div>
-  </section>
-
-  <section aria-labelledby="h-key">
-    <h2 id="h-key">4. Answer key</h2>
-    <label class="block">Type or paste the key (ABCD... or 1.A 2.B ...)
-      <textarea id="key" rows="3" spellcheck="false" placeholder="ABCDABCDABCD..."></textarea>
-    </label>
-    <div class="row buttons"><button id="btn-compare" type="button" class="btn primary">Compare with answer key</button></div>
-    <p id="score" class="score" role="status"></p>
-    <ul id="wrong" class="wrong"></ul>
-  </section>
-
-  <section aria-labelledby="h-log">
-    <h2 id="h-log">5. Session log</h2>
-    <p id="log-summary" class="status">Sheets scanned: 0</p>
-    <div class="row buttons">
-      <button id="btn-export" type="button" class="btn primary">Save log (.txt)</button>
-      <button id="btn-share" type="button" class="btn" hidden>Share log</button>
-      <button id="btn-clear" type="button" class="btn">Clear log</button>
-    </div>
-    <pre id="log-view" class="logview"></pre>
-  </section>
-</main>
+  <header class="masthead"><span class="brand-mark" aria-hidden="true">✓</span><span>Ednovera <strong>Attendance</strong></span></header>
+  <main id="app" aria-busy="true"><p role="status">Opening attendance…</p></main>
+  <noscript>This app needs JavaScript to save attendance.</noscript>
 </body>
 </html>
